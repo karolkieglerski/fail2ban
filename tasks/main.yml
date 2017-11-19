@@ -1,2 +1,11 @@
 ---
-# tasks file for fail2ban
+  - include_tasks: install.yml
+    when: fail2ban_purge is not defined or not fail2ban_purge
+
+  - include_tasks: configure.yml
+    when: fail2ban_purge is not defined or not fail2ban_purge
+
+  - include_tasks: purge.yml
+    when:
+      - fail2ban_purge is defined
+      - fail2ban_purge

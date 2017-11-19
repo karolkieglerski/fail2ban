@@ -1,0 +1,7 @@
+---
+  - name: send configs
+    template:
+      src: "{{ item.name }}.j2"
+      dest: "{{ item.dest }}{{ item.name }}"
+    with_items: "{{ fail2ban_configs }}"
+    notify: restart_fail2ban

@@ -1,2 +1,14 @@
 ---
-# handlers file for fail2ban
+  - name: start_fail2ban
+    service:
+      name: fail2ban
+      enabled: true
+      state: started
+    when: not fail2ban_purge
+
+  - name: restart_fail2ban
+    service:
+      name: fail2ban
+      enabled: true
+      state: restarted
+    when: not fail2ban_purge

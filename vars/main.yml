@@ -1,2 +1,7 @@
 ---
-# vars file for fail2ban
+  ssh_port: "{{ ansible_port }}"
+  fail2ban_version: latest
+
+  fail2ban_configs:
+    - { name: "fail2ban.conf",  dest: "/etc/fail2ban/" }
+    - { name: "jail.local",     dest: "/etc/fail2ban/" }

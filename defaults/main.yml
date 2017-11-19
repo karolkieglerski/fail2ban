@@ -18,7 +18,7 @@
   file2ban_maxretry: "3"
   file2ban_backend: "auto"
   file2ban_usedns: "warn"
-  file2ban_enabled: "true"
+  file2ban_enabled: "false"
   file2ban_destemail: "root@localhost"
   file2ban_sender: "root@localhost"
   fail2ban_mta: "sendmail"

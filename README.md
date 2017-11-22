@@ -1,4 +1,4 @@
-Role Name
+fail2ban
 =========
 
 [![Build Status](https://travis-ci.org/kilerkarol/fail2ban.svg?branch=master)](https://travis-ci.org/kilerkarol/fail2ban)
